@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab Cookies</title>
+
+    <script>
+        // Setare cookies
+        document.cookie = "session=test GDPR; path=/";
+        document.cookie = "favorite_task=collect Data; path=/";
+
+        // Funcție afișare cookies
+        function alertCookie() {
+            alert(document.cookie);
+        }
+
+        // Funcție afișare formatată
+        function showCookies() {
+            document.getElementById("output").innerText = document.cookie;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Bine ai venit la laborator</h2>
+
+    <button onclick="alertCookie()">Show cookies (alert)</button>
+    <button onclick="showCookies()">Show cookies (page)</button>
+
+    <p id="output"></p>
+</body>
+</html>
